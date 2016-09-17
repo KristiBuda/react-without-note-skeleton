@@ -13,13 +13,22 @@
     <div id="content"></div>
 
     <script type="text/babel">
+
+      var btnStyle = {
+        background: "blue"
+      };
+
         var Button = React.createClass({
+          Clicked: function(e){
+            alert("CLICKED");
+          },
             render: function() {
                 return (
-                  <button>click</button>
+                  <button onClick={this.Clicked} style={btnStyle}>click</button>
                 );
               }
             });
+
             ReactDOM.render(<Button />,document.getElementById('content'));
     </script>
   </body>
